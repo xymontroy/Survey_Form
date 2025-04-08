@@ -24,12 +24,7 @@
             </div>
         </div>
         
-        <div id="validation-message" class="validation-message hidden">
-            <i class="fas fa-exclamation-circle"></i>
-            Please complete all questions before submitting.
-        </div>
-        
-        <form id="survey-form" action="thank-you.html">
+        <form id="survey-form">
             <section class="form-section" id="section-1">
                 <div class="section-header">
                     <div class="section-icon">
@@ -41,21 +36,19 @@
                 <div class="form-content">
                     <div class="form-group">
                         <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="text" id="email" name="email" placeholder="Your answer" required>
-                        <div class="error-message"></div>
+                        <input type="text" id="email" name="email" placeholder="Your answer">
                     </div>
 
                     <div class="form-group">
                         <label for="age">Age <span class="required">*</span></label>
-                        <input type="text" id="age" name="age" placeholder="Your answer" required>
-                        <div class="error-message"></div>
+                        <input type="text" id="age" name="age" placeholder="Your answer">
                     </div>
                     
                     <div class="form-group">
                         <label>Gender <span class="required">*</span></label>
                         <div class="options radio-options" data-group="gender">
                             <label class="radio-container">
-                                <input type="radio" name="gender" value="male" required>
+                                <input type="radio" name="gender" value="male">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Male</span>
                             </label>
@@ -70,14 +63,13 @@
                                 <span class="radio-label">Other</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>Current Year or Semester <span class="required">*</span></label>
                         <div class="options radio-options" data-group="year">
                             <label class="radio-container">
-                                <input type="radio" name="year" value="1st" required>
+                                <input type="radio" name="year" value="1st">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">1st Year</span>
                             </label>
@@ -103,14 +95,13 @@
                                 <input type="text" class="inline-input" name="year_other" placeholder="Your answer">
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>IT Specialization <span class="required">*</span></label>
                         <div class="options radio-options" data-group="specialization">
                             <label class="radio-container">
-                                <input type="radio" name="specialization" value="software" required>
+                                <input type="radio" name="specialization" value="software">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Software Development</span>
                             </label>
@@ -141,14 +132,13 @@
                                 <input type="text" class="inline-input" name="specialization_other" placeholder="Your answer">
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How long have you been enrolled in this IT program? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="enrollment">
                             <label class="radio-container">
-                                <input type="radio" name="enrollment" value="less6" required>
+                                <input type="radio" name="enrollment" value="less6">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Less than 6 months</span>
                             </label>
@@ -168,7 +158,6 @@
                                 <span class="radio-label">Over 2 years</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                 </div>
             </section>
@@ -186,7 +175,7 @@
                         <label>How satisfied are you with the overall quality of the IT program? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="quality">
                             <label class="radio-container">
-                                <input type="radio" name="quality" value="very-satisfied" required>
+                                <input type="radio" name="quality" value="very-satisfied">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Satisfied</span>
                             </label>
@@ -211,14 +200,13 @@
                                 <span class="radio-label">Very Dissatisfied</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How effective are the teaching methods for technical subjects? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="teaching">
                             <label class="radio-container">
-                                <input type="radio" name="teaching" value="very-effective" required>
+                                <input type="radio" name="teaching" value="very-effective">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Effective</span>
                             </label>
@@ -243,14 +231,13 @@
                                 <span class="radio-label">Very Ineffective</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>Are the course materials relevant and up to date? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="materials">
                             <label class="radio-container">
-                                <input type="radio" name="materials" value="very-relevant" required>
+                                <input type="radio" name="materials" value="very-relevant">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Yes, very relevant</span>
                             </label>
@@ -265,14 +252,13 @@
                                 <span class="radio-label">Not relevant</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How helpful are the assignments and projects in developing your technical skills? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="assignments">
                             <label class="radio-container">
-                                <input type="radio" name="assignments" value="extremely" required>
+                                <input type="radio" name="assignments" value="extremely">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Extremely helpful</span>
                             </label>
@@ -287,14 +273,13 @@
                                 <span class="radio-label">Not helpful</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How would you rate the balance between theory and practical learning? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="balance">
                             <label class="radio-container">
-                                <input type="radio" name="balance" value="balanced" required>
+                                <input type="radio" name="balance" value="balanced">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Well-balanced</span>
                             </label>
@@ -314,7 +299,6 @@
                                 <span class="radio-label">Needs improvement</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                 </div>
             </section>
@@ -332,7 +316,7 @@
                         <label>How knowledgeable are your IT instructors? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="knowledge">
                             <label class="radio-container">
-                                <input type="radio" name="knowledge" value="extremely" required>
+                                <input type="radio" name="knowledge" value="extremely">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Extremely Knowledgeable</span>
                             </label>
@@ -352,14 +336,13 @@
                                 <span class="radio-label">Not Knowledgeable</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How clear and effective are their explanations of technical concepts? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="clarity">
                             <label class="radio-container">
-                                <input type="radio" name="clarity" value="very-clear" required>
+                                <input type="radio" name="clarity" value="very-clear">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Clear</span>
                             </label>
@@ -384,14 +367,13 @@
                                 <span class="radio-label">Very Confusing</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>Do instructors encourage problem-solving and critical thinking? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="encourage">
                             <label class="radio-container">
-                                <input type="radio" name="encourage" value="always" required>
+                                <input type="radio" name="encourage" value="always">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Always</span>
                             </label>
@@ -416,14 +398,13 @@
                                 <span class="radio-label">Never</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How approachable and supportive are the instructors? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="approachable">
                             <label class="radio-container">
-                                <input type="radio" name="approachable" value="very" required>
+                                <input type="radio" name="approachable" value="very">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Approachable</span>
                             </label>
@@ -443,7 +424,6 @@
                                 <span class="radio-label">Not Approachable</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                 </div>
             </section>
@@ -461,7 +441,7 @@
                         <label>Are the lab facilities equipped with up-to-date hardware and software? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="facilities">
                             <label class="radio-container">
-                                <input type="radio" name="facilities" value="fully" required>
+                                <input type="radio" name="facilities" value="fully">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Yes, fully equipped</span>
                             </label>
@@ -481,14 +461,13 @@
                                 <span class="radio-label">Not equipped</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How reliable is the internet and network connectivity in the IT department? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="connectivity">
                             <label class="radio-container">
-                                <input type="radio" name="connectivity" value="very" required>
+                                <input type="radio" name="connectivity" value="very">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Reliable</span>
                             </label>
@@ -508,14 +487,13 @@
                                 <span class="radio-label">Very Unreliable</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>Are the available tools, platforms, and software relevant to industry standards? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="tools">
                             <label class="radio-container">
-                                <input type="radio" name="tools" value="fully" required>
+                                <input type="radio" name="tools" value="fully">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Yes, fully relevant</span>
                             </label>
@@ -530,14 +508,13 @@
                                 <span class="radio-label">Not relevant</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How often do you get hands-on experience with industry tools? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="experience">
                             <label class="radio-container">
-                                <input type="radio" name="experience" value="frequently" required>
+                                <input type="radio" name="experience" value="frequently">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Frequently</span>
                             </label>
@@ -557,7 +534,6 @@
                                 <span class="radio-label">Never</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                 </div>
             </section>
@@ -575,7 +551,7 @@
                         <label>Do you feel the program is helping you develop industry-ready skills? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="skills">
                             <label class="radio-container">
-                                <input type="radio" name="skills" value="significantly" required>
+                                <input type="radio" name="skills" value="significantly">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Yes, significantly</span>
                             </label>
@@ -595,14 +571,13 @@
                                 <span class="radio-label">Not at all</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How prepared do you feel for technical certifications? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="certifications">
                             <label class="radio-container">
-                                <input type="radio" name="certifications" value="very" required>
+                                <input type="radio" name="certifications" value="very">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Prepared</span>
                             </label>
@@ -617,14 +592,13 @@
                                 <span class="radio-label">Not Prepared</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How effective are career development activities? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="career">
                             <label class="radio-container">
-                                <input type="radio" name="career" value="very" required>
+                                <input type="radio" name="career" value="very">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Effective</span>
                             </label>
@@ -649,14 +623,13 @@
                                 <span class="radio-label">Very Ineffective</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>Do you receive enough guidance on job opportunities and career paths? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="guidance">
                             <label class="radio-container">
-                                <input type="radio" name="guidance" value="regularly" required>
+                                <input type="radio" name="guidance" value="regularly">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Yes, regularly</span>
                             </label>
@@ -676,14 +649,13 @@
                                 <span class="radio-label">Never</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                     
                     <div class="form-group">
                         <label>How confident are you in applying your skills in real-world IT scenarios? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="confidence">
                             <label class="radio-container">
-                                <input type="radio" name="confidence" value="very" required>
+                                <input type="radio" name="confidence" value="very">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Very Confident</span>
                             </label>
@@ -698,7 +670,6 @@
                                 <span class="radio-label">Not Confident</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                 </div>
             </section>
@@ -714,21 +685,19 @@
                 <div class="form-content">
                     <div class="form-group">
                         <label for="enjoy">What do you enjoy most about the IT program? <span class="required">*</span></label>
-                        <textarea id="enjoy" name="enjoy" rows="3" placeholder="Your answer" required></textarea>
-                        <div class="error-message"></div>
+                        <textarea id="enjoy" name="enjoy" rows="3" placeholder="Your answer"></textarea>
                     </div>
                     
                     <div class="form-group">
                         <label for="improve">What areas need improvement? <span class="required">*</span></label>
-                        <textarea id="improve" name="improve" rows="3" placeholder="Your answer" required></textarea>
-                        <div class="error-message"></div>
+                        <textarea id="improve" name="improve" rows="3" placeholder="Your answer"></textarea>
                     </div>
                     
                     <div class="form-group">
                         <label>Would you recommend this program to other IT students? <span class="required">*</span></label>
                         <div class="options radio-options" data-group="recommend">
                             <label class="radio-container">
-                                <input type="radio" name="recommend" value="yes" required>
+                                <input type="radio" name="recommend" value="yes">
                                 <span class="radio-checkmark"></span>
                                 <span class="radio-label">Yes</span>
                             </label>
@@ -743,13 +712,12 @@
                                 <span class="radio-label">Maybe</span>
                             </label>
                         </div>
-                        <div class="error-message"></div>
                     </div>
                 </div>
             </section>
             
             <div class="form-actions">
-                <button type="button" id="validate-btn">Submit</button>
+                <button type="button" id="submit-btn">Submit</button>
                 <button type="reset">Clear form</button>
             </div>
             
@@ -763,112 +731,15 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('survey-form');
-            const validateBtn = document.getElementById('validate-btn');
-            const validationMessage = document.getElementById('validation-message');
+            const submitBtn = document.getElementById('submit-btn');
             
-            // Add event listeners to all radio buttons to clear error messages when selected
-            const radioButtons = document.querySelectorAll('input[type="radio"]');
-            radioButtons.forEach(radio => {
-                radio.addEventListener('change', function() {
-                    const group = this.closest('.radio-options');
-                    if (group) {
-                        const errorMessage = group.nextElementSibling;
-                        errorMessage.textContent = '';
-                        errorMessage.classList.remove('show');
-                        group.classList.remove('error');
-                    }
-                });
-            });
-            
-            // Add event listeners to all text inputs and textareas
-            const textInputs = document.querySelectorAll('input[type="text"], textarea');
-            textInputs.forEach(input => {
-                input.addEventListener('input', function() {
-                    const errorMessage = this.nextElementSibling;
-                    if (errorMessage && errorMessage.classList.contains('error-message')) {
-                        errorMessage.textContent = '';
-                        errorMessage.classList.remove('show');
-                        this.classList.remove('error');
-                    }
-                });
-            });
-            
-            // Validate form on submit button click
-            validateBtn.addEventListener('click', function(e) {
+            // Simple redirect on submit button click
+            submitBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                let isValid = true;
-                let firstInvalidElement = null;
-                
-                // Reset all error messages
-                const errorMessages = document.querySelectorAll('.error-message');
-                errorMessages.forEach(msg => {
-                    msg.textContent = '';
-                    msg.classList.remove('show');
-                });
-                
-                // Validate text inputs
-                const requiredInputs = form.querySelectorAll('input[type="text"][required], textarea[required]');
-                requiredInputs.forEach(input => {
-                    if (!input.value.trim()) {
-                        const errorMessage = input.nextElementSibling;
-                        errorMessage.textContent = 'This field is required';
-                        errorMessage.classList.add('show');
-                        input.classList.add('error');
-                        isValid = false;
-                        
-                        if (!firstInvalidElement) {
-                            firstInvalidElement = input;
-                        }
-                    }
-                });
-                
-                // Validate radio button groups
-                const radioGroups = form.querySelectorAll('.radio-options[data-group]');
-                radioGroups.forEach(group => {
-                    const groupName = group.getAttribute('data-group');
-                    const checkedRadio = form.querySelector(`input[name="${groupName}"]:checked`);
-                    
-                    if (!checkedRadio) {
-                        const errorMessage = group.nextElementSibling;
-                        errorMessage.textContent = 'Please select an option';
-                        errorMessage.classList.add('show');
-                        group.classList.add('error');
-                        isValid = false;
-                        
-                        if (!firstInvalidElement) {
-                            firstInvalidElement = group;
-                        }
-                    }
-                });
-                
-                if (!isValid) {
-                    // Show validation message
-                    validationMessage.classList.remove('hidden');
-                    
-                    // Scroll to first invalid element
-                    if (firstInvalidElement) {
-                        const section = firstInvalidElement.closest('.form-section');
-                        if (section) {
-                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            
-                            // Highlight the section
-                            section.classList.add('highlight');
-                            setTimeout(() => {
-                                section.classList.remove('highlight');
-                            }, 1500);
-                        }
-                    }
-                } else {
-                    // Hide validation message
-                    validationMessage.classList.add('hidden');
-                    
-                    // Redirect to thank you page
-                    window.location.href = 'thank-you.html';
-                }
+                // Redirect to thank you page without validation
+                window.location.href = 'thank-you.html';
             });
         });
     </script>
 </body>
 </html>
-
