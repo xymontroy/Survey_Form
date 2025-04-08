@@ -606,4 +606,283 @@
     }
   }
   
-  
+
+        /* Additional styles for the interactive elements */
+        .feedback-visualization {
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-light);
+        }
+        
+        .feedback-visualization h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .progress-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .progress-label {
+            width: 150px;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+        
+        .progress-bar-container {
+            flex: 1;
+            height: 12px;
+            background-color: #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 0 15px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--primary-light), var(--primary));
+            border-radius: 6px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-value {
+            width: 40px;
+            font-size: 14px;
+            color: var(--text-medium);
+            text-align: right;
+        }
+        
+        /* Certificate styles */
+        .certificate-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .certificate-container h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .certificate {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 0 auto 20px;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235eb455' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .certificate-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .certificate-logo {
+            width: 40px;
+            height: auto;
+            margin-right: 15px;
+        }
+        
+        .certificate-header h2 {
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin: 0;
+        }
+        
+        .certificate-body {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .certificate-body p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: var(--text-medium);
+        }
+        
+        .certificate-name {
+            font-size: 24px !important;
+            font-weight: 600;
+            color: var(--text-dark) !important;
+            margin: 15px 0 !important;
+        }
+        
+        .certificate-program {
+            font-weight: 500;
+            color: var(--primary) !important;
+            margin: 10px 0 !important;
+        }
+        
+        .certificate-date {
+            margin-top: 20px !important;
+            font-style: italic;
+        }
+        
+        .certificate-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .certificate-input {
+            padding: 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        .certificate-button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .certificate-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .certificate-button:not(:disabled):hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-dark));
+            transform: translateY(-2px);
+        }
+        
+        /* Share buttons */
+        .share-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .share-container h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .share-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .share-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-button.facebook {
+            background-color: #3b5998;
+        }
+        
+        .share-button.twitter {
+            background-color: #1da1f2;
+        }
+        
+        .share-button.linkedin {
+            background-color: #0077b5;
+        }
+        
+        /* Action buttons update */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .progress-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .progress-label {
+                width: 100%;
+            }
+            
+            .progress-bar-container {
+                width: 100%;
+                margin: 5px 0;
+            }
+            
+            .progress-value {
+                width: 100%;
+                text-align: left;
+            }
+            
+            .certificate {
+                padding: 15px;
+            }
+            
+            .certificate-header h2 {
+                font-size: 18px;
+            }
+            
+            .certificate-name {
+                font-size: 20px !important;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+            }
+            
+            .share-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    

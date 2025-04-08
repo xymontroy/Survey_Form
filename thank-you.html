@@ -34,10 +34,79 @@
                     Your responses have been successfully submitted. We greatly appreciate your time and valuable input. 
                     Your feedback will help us improve the IT program and educational experience for all students.
                 </p>
+                
+                <!-- Interactive feedback visualization -->
+                <div class="feedback-visualization">
+                    <h3>Your Feedback Impact</h3>
+                    <div class="progress-container">
+                        <div class="progress-label">Curriculum Improvement</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="curriculum-bar"></div>
+                        </div>
+                        <div class="progress-value">0%</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">Teaching Methods</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="teaching-bar"></div>
+                        </div>
+                        <div class="progress-value">0%</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">Lab Resources</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="resources-bar"></div>
+                        </div>
+                        <div class="progress-value">0%</div>
+                    </div>
+                </div>
+                
+                <!-- Interactive certificate -->
+                <div class="certificate-container">
+                    <h3>Your Participation Certificate</h3>
+                    <div class="certificate" id="certificate">
+                        <div class="certificate-header">
+                            <img src="ui.png" alt="Phinma University of Iloilo" class="certificate-logo">
+                            <h2>Certificate of Participation</h2>
+                        </div>
+                        <div class="certificate-body">
+                            <p>This certifies that</p>
+                            <p class="certificate-name" id="participant-name">Student Name</p>
+                            <p>has provided valuable feedback for the improvement of the</p>
+                            <p class="certificate-program">CITE Department Educational Program</p>
+                            <p class="certificate-date" id="certificate-date">April 8, 2025</p>
+                        </div>
+                    </div>
+                    <div class="certificate-form">
+                        <input type="text" id="name-input" placeholder="Enter your name for the certificate" class="certificate-input">
+                        <button id="generate-certificate" class="certificate-button">Generate Certificate</button>
+                        <button id="download-certificate" class="certificate-button" disabled>Download Certificate</button>
+                    </div>
+                </div>
+                
+                <!-- Share feedback -->
+                <div class="share-container">
+                    <h3>Share Your Experience</h3>
+                    <div class="share-buttons">
+                        <button class="share-button facebook">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </button>
+                        <button class="share-button twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="share-button linkedin">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </button>
+                    </div>
+                </div>
+                
                 <div class="action-buttons">
                     <a href="index-1.html" class="action-button secondary-button">
                         <i class="fas fa-arrow-left"></i> Return to Homepage
                     </a>
+                    <button id="show-confetti" class="action-button primary-button">
+                        <i class="fas fa-magic"></i> Celebrate
+                    </button>
                 </div>
             </div>
         </section>
@@ -47,6 +116,120 @@
             <p>This content is neither created nor endorsed by Phinma University of Iloilo. <a href="#">Report Abuse</a></p>
         </div>
     </div>
+
+    <!-- Add confetti.js for celebration effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate progress bars
+            function animateProgressBar(elementId, targetValue) {
+                const bar = document.getElementById(elementId);
+                const valueDisplay = bar.parentElement.nextElementSibling;
+                let width = 0;
+                
+                const interval = setInterval(() => {
+                    if (width >= targetValue) {
+                        clearInterval(interval);
+                    } else {
+                        width++;
+                        bar.style.width = width + '%';
+                        valueDisplay.textContent = width + '%';
+                    }
+                }, 20);
+            }
+            
+            // Start animations with random values between 70-95%
+            setTimeout(() => {
+                animateProgressBar('curriculum-bar', Math.floor(Math.random() * 26) + 70);
+                animateProgressBar('teaching-bar', Math.floor(Math.random() * 26) + 70);
+                animateProgressBar('resources-bar', Math.floor(Math.random() * 26) + 70);
+            }, 500);
+            
+            // Certificate generation
+            const nameInput = document.getElementById('name-input');
+            const generateBtn = document.getElementById('generate-certificate');
+            const downloadBtn = document.getElementById('download-certificate');
+            const participantName = document.getElementById('participant-name');
+            const certificateDate = document.getElementById('certificate-date');
+            
+            // Set current date
+            const today = new Date();
+            certificateDate.textContent = today.toLocaleDateString('en-US', { 
+                month: 'long', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+            
+            generateBtn.addEventListener('click', function() {
+                if (nameInput.value.trim() !== '') {
+                    participantName.textContent = nameInput.value;
+                    downloadBtn.disabled = false;
+                    
+                    // Show success animation
+                    this.innerHTML = '<i class="fas fa-check"></i> Generated!';
+                    setTimeout(() => {
+                        this.innerHTML = 'Generate Certificate';
+                    }, 2000);
+                }
+            });
+            
+            downloadBtn.addEventListener('click', function() {
+                // In a real implementation, you would use html2canvas or similar
+                // to actually generate a downloadable certificate
+                alert('In a production environment, this would download your certificate as a PDF or image.');
+                
+                // Show success animation
+                this.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+                setTimeout(() => {
+                    this.innerHTML = 'Download Certificate';
+                }, 2000);
+            });
+            
+            // Share buttons functionality
+            const shareButtons = document.querySelectorAll('.share-button');
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const platform = this.textContent.trim();
+                    alert(`In a production environment, this would share your experience on ${platform}.`);
+                });
+            });
+            
+            // Confetti celebration
+            const confettiBtn = document.getElementById('show-confetti');
+            confettiBtn.addEventListener('click', function() {
+                const duration = 3 * 1000;
+                const animationEnd = Date.now() + duration;
+                const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+                function randomInRange(min, max) {
+                    return Math.random() * (max - min) + min;
+                }
+
+                const interval = setInterval(function() {
+                    const timeLeft = animationEnd - Date.now();
+
+                    if (timeLeft <= 0) {
+                        return clearInterval(interval);
+                    }
+
+                    const particleCount = 50 * (timeLeft / duration);
+                    
+                    // Use school colors
+                    confetti(Object.assign({}, defaults, { 
+                        particleCount, 
+                        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                        colors: ['#5eb455', '#ffffff', '#4a9042']
+                    }));
+                    confetti(Object.assign({}, defaults, { 
+                        particleCount, 
+                        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                        colors: ['#5eb455', '#ffffff', '#4a9042']
+                    }));
+                }, 250);
+            });
+        });
+    </script>
+    
 </body>
 </html>
-
